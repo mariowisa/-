@@ -1,0 +1,54 @@
+summary(HHPD)
+
+table(TWDAYS,EEDUC)
+
+prop.table(table(TWDAYS,EEDUC))
+
+W <- data.frame(matrix(ncol=1+length(summary(EEDUC)),nrow=0))
+
+
+attach(Household_Pulse_data)
+HHPD=Household_Pulse_data
+colnames(HHPD)
+
+table(TWDAYS,EEDUC)
+table(EEDUC,TWDAYS)
+
+```{r eval=FALSE}
+
+> xtabs(~ TWDAYS + EEDUC)
+EEDUC
+TWDAYS                               less than hs some hs HS diploma some coll assoc deg bach deg adv deg
+had 1-2 telework days in past week            6      12        152       537       272     1439    1667
+had 3-4 telework days in past week            3      10        108       395       174     1211    1348
+had 5+ telework days in past week            12      22        328      1247       617     3205    2905
+had no telework days in past week           246     551       4285      6977      3518     6637    5861
+
+mean(TWDAYS,EEDUC)
+
+TW <- data.frame(matrix(ncol=1+length(summary(EEDUC)),nrow=0))
+
+summary(HHPD) --
+
+colnames(TW) <- levels(unique(EEDUC))
+
+(( length(summary(EEDUC))){TW[1,i] <- summary(EEDUC[ TW=='had 1-2 telework days in past week' | TW=='had 3-4 telework days in past week' | TW=='had no telework days in past week' | TW == 'had 5+ telework days in past week'])[i] / summary(EEDUC)[i]}
+TW
+
+mean(TWDAYS[(EEDUC"" )])
+
+
+
+summary(RRACE[GENID_DESCRIBE=="female"])
+summary(race)
+
+summary(RRACE[GENID_DESCRIBE=="female"])
+summary(TBIRTH_YEAR[GENID_DESCRIBE == "female"&RRACE=="black"])
+hist(RRACE[GENID_DESCRIBE=="female"])
+
+hist(TBIRTH_YEAR[GENID_DESCRIBE == "female"])
+
+hist(TBIRTH_YEAR[(TBIRTH_YEAR > 1950)])
+hist(TBIRTH_YEAR[ (GENID_DESCRIBE == "female")& (TBIRTH_YEAR > 1950) ]) 
+hist(TBIRTH_YEAR[ (GENID_DESCRIBE == "female") &(TBIRTH_YEAR > 1950) ]) 
+
